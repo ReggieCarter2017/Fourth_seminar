@@ -1,9 +1,10 @@
-﻿double Pow1(int a, int b)
+﻿int Sum(string A)
 {
-    double result = 0;
-    result = Math.Pow(a, b);
-    return result;
+    char[] array = A.ToCharArray();
+    int result = 0;
+        for (int i = 0; i < A.Length; i++) result = result + int.Parse(array[i].ToString());
+        return result;
 }
-int.TryParse(Console.ReadLine(), out int A);
-int.TryParse(Console.ReadLine(), out int B);
-Console.Write(Pow1(A, B));
+Console.WriteLine("Введите число: ");
+string Str = Console.ReadLine()!;
+Console.WriteLine(Sum(Str));
